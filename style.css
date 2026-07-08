@@ -1,0 +1,352 @@
+:root {
+    --bg: #07130B;
+    --surface: #0F1F15;
+    --surface-light: #163322;
+    --primary: #22C55E;
+    --primary-dark: #16A34A;
+    --primary-light: #86EFAC;
+    --text: #F8FAFC;
+    --muted: #A7B8AE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(180deg, #07130B, #0A1810, #07130B);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(7, 19, 11, .8);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(34, 197, 94, .2);
+    z-index: 999;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+section {
+    min-height: 100vh;
+    padding: 120px 5%;
+}
+
+.yran {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.yran-text {
+    flex: 1;
+}
+
+.yran h1 {
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.1;
+}
+
+.yran h2 {
+    color: var(--primary);
+    margin: 15px 0 25px;
+}
+
+.yran p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.yran-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.yran img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 25px;
+    border: 4px solid var(--primary);
+    box-shadow: 0 0 40px rgba(34, 197, 94, .35);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 15px 36px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 50px;
+    transition: .3s;
+    box-shadow: 0 10px 30px rgba(34, 197, 94, .3);
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(34, 197, 94, .45);
+}
+
+h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 25px;
+    color: var(--primary-light);
+}
+
+h3 {
+    color: var(--primary-light);
+}
+
+.about h3 {
+    font-size: clamp(22px, 3vw, 30px);
+}
+
+.motivation, .skillz, .feedback {
+    text-align: justify;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 50px auto 0 auto;
+    max-width: 1200px;
+}
+
+.card {
+    text-align: center;
+    background: var(--surface);
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid rgba(34, 197, 94, .15);
+    transition: .35s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: var(--surface-light);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(34, 197, 94, .15);
+}
+
+.timeline {
+    display: grid;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.item {
+    background: var(--surface);
+    padding: 30px;
+    border-left: 5px solid var(--primary);
+    border-radius: 15px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.projectz{
+    text-align: justify;
+}
+
+.project {
+    overflow: hidden;
+    border-radius: 20px;
+    background: var(--surface);
+    transition: .35s;
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    background: var(--surface);
+    padding: 30px;
+    border-left: 5px solid var(--primary);
+    border-radius: 15px;
+    height: fit-content;
+}
+
+.explanation {
+    position: relative;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project h3 {
+    color: white;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 14px;
+    border: 2px solid green;
+    border-radius: 12px;
+    background: var(--surface);
+    color: white;
+    width: 100%;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid var(--primary);
+}
+
+button {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .3s;
+    width: 100%;
+}
+
+button:hover {
+    transform: translateY(-4px);
+}
+
+.contactbox {
+    background: var(--surface);
+    padding: 30px;
+    border: 1px solid var(--primary);
+    border-radius: 15px;
+    height: fit-content;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contacts {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    background: #1877F2;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 25px;
+    transition: .3s;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.table {
+    width: 100%;
+    max-width: 510px;
+    text-align: left;
+    border-collapse: separate;
+    margin: 0 auto;
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background: #050B07;
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--muted);
+}
+
+@media (max-width: 900px) {
+    .yran {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    
+    .yran img {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
+        position: static; 
+    }
+    
+    section {
+        padding: 60px 5%;
+    }
+    
+    nav {
+        justify-content: center;
+        gap: 20px;
+    }
+}
