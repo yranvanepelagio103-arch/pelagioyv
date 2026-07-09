@@ -217,7 +217,7 @@ h3 {
 
 .card:hover {
     transform: translateY(-10px);
-    background: var(--surface-light);
+    background: black;
     border-color: var(--primary);
     box-shadow: 0 20px 40px rgba(34, 197, 94, .15);
 }
